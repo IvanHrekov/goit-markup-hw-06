@@ -721,6 +721,7 @@ height: 100%;
 z-index: 100;
 transition: opacity var(--animation-effects), visibility var(--animation-effects);
 background-color: rgba(0, 0, 0, 0.2);
+
 }
 .backdrop.is-hidden{
     visibility: hidden;
@@ -736,6 +737,8 @@ background-color: rgba(0, 0, 0, 0.2);
     width: 528px;
     height: 581px;
     background-color: var(--accent-second-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 .modal-close-button{
@@ -766,6 +769,81 @@ background-color: rgba(0, 0, 0, 0.2);
 .modal-window-user-info{
     display: flex;
     flex-direction: column;
-
+    
 }
+.modal-form-input{
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    
+}
+.modal-form-input:focus{
+    outline-width: 0px;
+    border-color:var(--accent-color)
+}
+.modal-form-input:focus+.modal-form-icon {
+    fill: var(--accent-color);
+}
+
+.modal-lable-desc{
+    display: block;
+    margin-bottom: 4px;
+    margin-top: 10px;
+    width: 100px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: var(--primary-text-color)
+        
+}
+.modal-form-input-wrapper{
+    position: relative;
+}
+
+
+
+.modal-form-icon{
+position: absolute;
+display: block;
+top: 50%;
+left: 12px;
+transform: translate(0, -50%);
+z-index: 100;
+/* margin-left: 12px; */
+}
+
+.modal-form-feald{
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 7px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.modal-form-feald:focus{
+    outline: none;
+    border-color: var(--accent-color);
+}
+.modal-form-feald::placeholder{
+            font-weight: 400;
+                font-size: 14px;
+                line-height: 1.14;
+                letter-spacing: 0.01em;
+                color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-check-desc::before{
+    display: block;
+    content:"";
+    width: 16px;
+    height: 15px;
+    border: 1px solid green;
+    border-radius: 2px;
+    background: #2196F3;
+    cursor: pointer;
+}
+
 /* /MODAL WINDOW */
