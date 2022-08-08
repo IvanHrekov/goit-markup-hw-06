@@ -447,9 +447,28 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form-wrapper">
+          <form class="footer-form">
+            <p class="footer-form-action">Подпишитесь на рассылку</p>
+            <div class="footer-wrapper-input-button">
+              <input
+                class="footer-form-input-email"
+                type="email"
+                placeholder="E-mail"
+              />
+              <button class="footer-form-button" type="submit">
+                <span class="footer-form-span">Подписаться</span>
+
+                <svg class="footer-icon-send">
+                  <use href="/images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-button" data-modal-close>
           <svg class="modal-close-btn-icon" width="18px" height="18px">
@@ -517,10 +536,15 @@
               ></textarea>
             </label>
 
-            <input type="checkbox" name="user_aggre" id="user_aggre" />
+            <input
+              class="modal-form-check hidden-title"
+              type="checkbox"
+              name="user_aggre"
+              id="user_aggre"
+            />
             <label class="modal-form-check-desc" for="user_aggre"
-              >Соглашаюсь с рассылкой и принимаю
-              <a href="">Условия договора</a></label
+              >Соглашаюсь с рассылкой и принимаю&nbsp;
+              <a class="molal-check-link" href="">Условия договора</a></label
             >
             <button class="modal-form-submit" type="submit">Отправить</button>
           </div>

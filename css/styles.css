@@ -757,8 +757,7 @@ background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal-title{
-    display: block;
-    margin-bottom: 12px;
+margin: 0 auto;
         font-weight: 700;
         font-size: 20px;
         line-height: 1.15;
@@ -772,6 +771,7 @@ background-color: rgba(0, 0, 0, 0.2);
     
 }
 .modal-form-input{
+    transition: border-color var(--animation-effects) ;
     font-size: 16px;
     width: 100%;
     height: 40px;
@@ -807,19 +807,21 @@ background-color: rgba(0, 0, 0, 0.2);
 
 
 .modal-form-icon{
+    transition: fill var(--animation-effects);
 position: absolute;
 display: block;
 top: 50%;
 left: 12px;
 transform: translate(0, -50%);
 z-index: 100;
-/* margin-left: 12px; */
 }
 
 .modal-form-feald{
+    transition:border-color var(--animation-effects);
     resize: none;
     width: 100%;
     height: 120px;
+    margin-bottom: 20px;
     padding: 7px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -835,15 +837,129 @@ z-index: 100;
                 letter-spacing: 0.01em;
                 color: rgba(117, 117, 117, 0.5);
 }
+.modal-form-check-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        color: var(--primary-text-color)
+}
+.molal-check-link{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        text-decoration-line: underline;
+        color: var(--accent-color)
+}
 .modal-form-check-desc::before{
     display: block;
     content:"";
+    cursor: pointer;
     width: 16px;
     height: 15px;
-    border: 1px solid green;
-    border-radius: 2px;
-    background: #2196F3;
-    cursor: pointer;
+    margin-right: 8px;
+background-image: url(/images/icon\ do\ not\ check.svg);
 }
-
+.modal-form-check:checked +.modal-form-check-desc::before{
+background-image: url(/images/icon\ check.svg);
+}
+.modal-form-check:focus +.modal-form-check-desc::before {
+    border: var(--accent-color) solid 1px;
+    border-radius: 2px;
+}
+.modal-form-submit{
+        display: block;
+        padding: 10px 52px;
+        min-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border-width: 0;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.9;
+        letter-spacing: 0.06em;
+        background-color: var(--accent-color);
+        color: var(--accent-second-color);
+}
 /* /MODAL WINDOW */
+
+/* FOOTER FORM */
+
+.footer-form-wrapper{
+    margin-left: 93px;
+}
+.footer-form-action{
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--accent-second-color)
+}
+.footer-form-input-email{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: var(--accent-second-color);
+        display: flex;
+        min-width: 358px;
+        height: 50px;
+        padding-left: 16px;
+        margin-right: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color:var(--secondary-background-color)
+}
+.footer-form-input-email::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+}
+.footer-form-button{
+    position: relative;
+    display: block;
+        padding: 10px 28px;
+        min-width: 200px;
+        max-height: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border-width: 0;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.9;
+        letter-spacing: 0.06em;
+        background-color: var(--accent-color);
+        color: var(--accent-second-color);
+}
+.footer-wrapper-input-button{
+    display: flex;
+    justify-content: left;
+}
+.footer-icon-send{
+position: absolute;
+width: 24px;
+height: 24px;
+right: 27px;
+top: 13px;
+bottom: 13px;
+margin-left: 10px;
+}
+.footer-form-span{
+    position: absolute;
+    left: 29px;
+    top: 10px;
+    bottom: 10px;
+}
+/* /FOOTER FORM */
