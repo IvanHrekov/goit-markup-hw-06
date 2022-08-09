@@ -866,10 +866,10 @@ z-index: 100;
     width: 16px;
     height: 15px;
     margin-right: 8px;
-background-image: url(/images/icon-do-not-check.svg);
+background-image: url(../images/icon-do-not-check.svg);
 }
 .modal-form-check:checked +.modal-form-check-desc::before{
-background-image: url(/images/icon-check.svg);
+background-image: url(../images/icon-check.svg);
 }
 .modal-form-check:focus +.modal-form-check-desc::before {
     border: var(--accent-color) solid 1px;
